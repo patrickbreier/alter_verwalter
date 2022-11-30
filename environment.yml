@@ -1,0 +1,13 @@
+name: alter_verwalter
+
+dependencies:
+  - python
+  - jupyter
+  - numpy
+  - pandas
+  - python-barcode
+  - pillow
+  - opencv
+  - fpdf2
+  - pip:
+    - pdflatex
