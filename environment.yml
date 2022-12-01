@@ -10,6 +10,7 @@ dependencies:
   - opencv
   - fpdf2
   - python-docx
+  - pypdf2
   - pip:
     - pdflatex
     - docx2pdf
