@@ -1,0 +1,62 @@
+%%
+% German Latex Letter Template 
+% Use if you want to crate a Letter in DIN A4. You can use it in English and German 
+% as well, just set language at begining of plain text.
+% Created by Jan Boelmann @ Nov. 2016 Jan.boelmann@live.de
+%%
+
+\documentclass[
+    sender,
+    paper=a4,
+    version=last,
+    fontsize=11pt,
+    DIV=13,
+    BCOR=0mm]{scrlttr2}
+\parskip3mm
+\parindent0mm % if you want to have no lineskip
+\usepackage[english,ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+% Set Font: sans serif Latin Modern
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+% Set Page layout:
+
+\usepackage{changepage}
+%\changepage{text height}{text width}{even-side margin}
+%{odd-side margin}{column sep.}
+%{topmargin}{headheight}{headsep}{footskip}
+\changepage{+3cm}{}{}{}{}{}{}{}{-5cm}
+\LoadLetterOption{./einladungen/<name_underscore>/sender2}
+
+\begin{document}
+% subject, date, place:
+\setkomavar{subject}{Betreff: Antrag auf Befreiung von der Teilnahmepflicht}
+\setkomavar{date}{Datum}
+\setkomavar{place}{Ort}
+% Set recipient of letter
+\begin{letter}{
+    Partyfolks,\\
+    Straße 1,\\
+    00000 Somewhere
+}
+\opening{Sehr geehrte Damen und Herren}
+
+% Write here your Letter text. You can choose here the language for typeset. ("english", or "ngerman")
+\selectlanguage{ngerman}
+%\parindent2mm
+
+hiermit beantrage ich, <name>, die staatliche Anerkennung meiner aufrichtigen Entschuldigung für das in jeglicher Hinsicht unverantwortliche und unvernünftige Fernbleiben während der in beiligendem Schreiben bekanntgegebenen außerordentlich wichtigen Festlichkeit.
+
+Die hierzu erforderlichen Unterlagen sind dem Antrag in der Anlage beigefügt.
+
+
+%\selectlanguage{german}%Choose language for closing text
+\closing{Mit freundlichen Grüßen} % use "Mit freundlich Grüßen"
+
+% end of letter
+\end{letter}
+
+\end{document}

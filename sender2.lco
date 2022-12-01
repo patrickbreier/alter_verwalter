@@ -37,8 +37,8 @@
 
 
 % Sender data:
-\setkomavar{backaddress}{Austin Powers, Stra{\ss}e 1, 00000 Moon}
-\setkomavar{fromaddress}{Austin Powers,\\Stra{\ss}e 1\\00000 Moon}
+\setkomavar{backaddress}{<name>, <adress>}
+\setkomavar{fromaddress}{<name>\\<adress>}
 
 
 
@@ -50,7 +50,7 @@
 %\setkomafont{fromaddress}{\small\rmfamily\mdseries\slshape\color{myblue}}
 \setkomafont{addressee}{\small}
 
-\setkomavar{signature}{Austin Powers}
+\setkomavar{signature}{<name>}
 \renewcommand*{\raggedsignature}{\raggedright}
 
 % define vertical distance for signature
