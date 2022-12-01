@@ -9,5 +9,7 @@ dependencies:
   - pillow
   - opencv
   - fpdf2
+  - python-docx
   - pip:
     - pdflatex
+    - docx2pdf
