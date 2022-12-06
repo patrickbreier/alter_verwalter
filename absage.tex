@@ -18,10 +18,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
-
+\usepackage{courier}
 % Set Font: sans serif Latin Modern
 \usepackage{lmodern}
-\renewcommand*\familydefault{\sfdefault}
+\renewcommand\familydefault{\ttdefault}
 % Set Page layout:
 
 \usepackage{changepage}
@@ -38,21 +38,28 @@
 \setkomavar{place}{Ort}
 % Set recipient of letter
 \begin{letter}{
-    Partyfolks,\\
-    Straße 1,\\
-    00000 Somewhere
+(Verw)alterungsamt für Soziales, Freunde und Spaß
+Referat A 38 – Sozialmonitoring\\ und Sozialberichterstattung\\
+z.H. Frau Band, Sekretariat\\
+Str. 1\\
+00000 Mond
+
 }
-\opening{Sehr geehrte Damen und Herren}
+\opening{Sehr geehrte Damen und Herren,}
 
 % Write here your Letter text. You can choose here the language for typeset. ("english", or "ngerman")
 \selectlanguage{ngerman}
 %\parindent2mm
 
-hiermit beantrage ich, <name>, die staatliche Anerkennung meiner aufrichtigen Entschuldigung für das in jeglicher Hinsicht unverantwortliche und unvernünftige Fernbleiben während der in beiligendem Schreiben bekanntgegebenen außerordentlich wichtigen Festlichkeit.
+hiermit beantrage ich, <name>, die Anerkennung meiner aufrichtigen Entschuldigung für das in jeglicher Hinsicht unverantwortliche und unvernünftige Fernbleiben von der einmaligen und außerordentlich wichtigen Veranstaltung \frqq Alter Verwalter!\flqq.
 
-Die hierzu erforderlichen Unterlagen sind dem Antrag in der Anlage beigefügt.
-
-
+Anbei übersende ich den Gastgebenden:
+\begin{itemize}
+    \item [--] Schriftliche Stellungnahme mit ausführlicher Begründung des Fehlbleibens,
+    \item [--] Kopie eines gültigen Ausweisdokumentes,
+    \item [--] Erweitertes Führungszeugnis nach § 30a BZRG.
+\end{itemize}
+\vspace{1cm}
 %\selectlanguage{german}%Choose language for closing text
 \closing{Mit freundlichen Grüßen} % use "Mit freundlich Grüßen"
 

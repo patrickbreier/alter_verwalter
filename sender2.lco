@@ -8,6 +8,7 @@
 \ProvidesFile{sender.lco}[letter-class-option file]
 
 \RequirePackage{marvosym}
+\RequirePackage{courier}
 
 % Text of this document (sender.lco) is UTF-8 encoded
 \RequirePackage[utf8]{inputenc}
@@ -37,8 +38,8 @@
 
 
 % Sender data:
-\setkomavar{backaddress}{<name>, <adress>}
-\setkomavar{fromaddress}{<name>\\<adress>}
+\setkomavar{backaddress}{\texttt{<name>}\\\texttt{<adress>}}
+\setkomavar{fromaddress}{\texttt{<name>}\\\texttt{<adress>}}
 
 
 

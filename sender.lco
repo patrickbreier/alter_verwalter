@@ -8,10 +8,10 @@
 \ProvidesFile{sender.lco}[letter-class-option file]
 
 \RequirePackage{marvosym}
+\RequirePackage{courier}
 
 % Text of this document (sender.lco) is UTF-8 encoded
 \RequirePackage[utf8]{inputenc}
-
 % if yu wnat some colors...
 \RequirePackage{color}
 
@@ -28,7 +28,7 @@
     fromphone=off,
     frommobilephone=off,
 }
-
+\renewcommand\familydefault{\ttdefault}
 
 
 % You can define colors here like this...
@@ -37,9 +37,8 @@
 
 
 % Sender data:
-\setkomavar{backaddress}{Austin Powers, Stra{\ss}e 1, 00000 Moon}
-\setkomavar{fromaddress}{Austin Powers,\\Stra{\ss}e 1\\00000 Moon}
-
+\setkomavar{backaddress}{\texttt{Verwalterungsamt, Stra{\ss}e 1, 00000 Mond}}
+\setkomavar{fromaddress}{\texttt{Baum,}\\ \texttt{Haus,}\\ \texttt{Busch,}\\ \texttt{Stra{\ss}e 1,}\\ \texttt{00000 Mond}}
 
 
 % optical stuff:
@@ -50,7 +49,7 @@
 %\setkomafont{fromaddress}{\small\rmfamily\mdseries\slshape\color{myblue}}
 \setkomafont{addressee}{\small}
 
-\setkomavar{signature}{Austin Powers}
+\setkomavar{signature}{\texttt{Baum, Haus, Busch}}
 \renewcommand*{\raggedsignature}{\raggedright}
 
 % define vertical distance for signature

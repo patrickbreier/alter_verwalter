@@ -18,10 +18,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
-
+\usepackage{enumitem}  % for customized enumerate
+\usepackage{courier}
 % Set Font: sans serif Latin Modern
 \usepackage{lmodern}
-\renewcommand*\familydefault{\sfdefault}
 % Set Page layout:
 
 \usepackage{changepage}
@@ -30,38 +30,54 @@
 %{topmargin}{headheight}{headsep}{footskip}
 \changepage{+3cm}{}{}{}{}{}{}{}{-5cm}
 \LoadLetterOption{sender}
+\renewcommand\familydefault{\ttdefault}
+
 
 \begin{document}
 % Set Appendix text at very end (colon will be set automatically)
 \setkomavar*{enclseparator}{Appendix}
 % subject, date, place:
-\setkomavar{subject}{Subject: This is an Example}
-\setkomavar{date}{30. November 2022}
-\setkomavar{place}{Dresden}
+\setkomavar{subject}{Betreff: Alter Verwalter - Wir werden 30!}
+\setkomavar{date}{\today}
+\setkomavar{place}{Mond}
 
 
 % Set recipient of letter
 \begin{letter}{
     <name>\\
     <adress>\\
-}
-\opening{Sehr <anrede> <surname>,}
-
+    }
+    
+\opening{Sehr geehrtes Mitglied unserer Feiergemeinschaft,}
 % Write here your Letter text. You can choose here the language for typeset. ("english", or "ngerman")
 \selectlanguage{ngerman}
 %\parindent2mm
-Lorem ipsum däöüolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+die befreundeten Personen Baum, Haus und Busch - im Nachfolgenden Gastgebende genannt 
+- erreichen das Alter von 30 Jahren\footnote{Baum: +31 Tage; Haus +16 Tage; Busch +2 Tage} und laden Sie hiermit herzlich zu ihrer Geburtstagsfeier ein.
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+Diese findet statt:
 
+am 28. Januar 2023 \\
+in der Straße 1, 00000 Mond. \\
+Einlassbeginn 19 Uhr.
+
+Es wäre den Gastgebenden eine außerordentliche Freude, wenn du persönlich an der Zusammenkunft teilnehmen könntest. Im Falle einer Nichtteilnahme wird um schriftliche Rückmeldung in Form des beigefügten Antrags auf Befreiung von der Teilnahmepflicht gebeten um unentschuldigtem Fernbleiben vorzubeugen.
+Eine Abschrift dieser Einladung kann bei Verlust gegen Vorschuss eines selbsthaftenden Wertzeichens\footnote{Briefmarke} durch das zuständige \textit{Verwalterungsamt} erneut ausgestellt werden.
+Um den geregelten Ablauf der Veranstaltung zu gewährleisten, ist es imperativ, dass du dich zu der auf der Eintrittskarte indizierten Zeit am o.g. Ort einfindest. Sofern nicht anders vereinbart, wird um unaufgefordertes Vorzeigen eines Identitätsnachweises gebeten.
 
 %\selectlanguage{german}%Choose language for closing text
 \closing{Mit freundlichen Grüßen} % use "Mit freundlich Grüßen" i.e.
+\begin{center}
+    - Dieses Schreiben wurde maschinell erstellt und ist ohne Unterschrift gültig -
+\end{center}
+%\encl{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+%\item [--] Personalisierte Eintrittskarte
+%\item [--] Vorduck für Antrag auf Befreiung von der Teilnahmepflicht
+%\item [--] Grußkarte
+%\end{itemize}}
+\vspace*{\fill}
 
-\encl{dies und das}
-- Dieses Schreiben wurde maschinell erstellt und ist ohne Unterschrift gültig -
 % end of letter
 \end{letter}
 
